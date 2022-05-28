@@ -11,11 +11,26 @@ function Calculadora() {
         setTotal(total + parseInt(valor))
     }
 
+    function subtracao() {
+        setTotal(total - parseInt(valor))
+    }
+
+    function multiplicacao () {
+        setTotal(total * parseInt(valor))
+    }
+
+    function divisao() {
+        setTotal(total / parseInt(valor))
+    }
+
     return (
         <div>
             <Display value={total} />
             <InputValue type="number" value={valor} change={setValor} />
             <Button type="button" text="+" click={soma} />
+            <Button type="button" text="-" click={subtracao} />
+            <Button type="button" text="*" click={multiplicacao} />
+            <Button type="button" text="/" click={divisao} />
         </div>
     )
 
